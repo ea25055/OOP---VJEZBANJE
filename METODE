@@ -1,0 +1,151 @@
+package Funkcije;
+import java.util.Scanner;
+
+public class vjezbanje {
+	// public static void suma1 (int n)	{
+	//	int suma = 0;
+	//	for (int i = 1; i <= n; i++) {
+	//		suma = suma + i ;
+	//	}
+	//System.out.print (suma);
+	//}
+
+	// napisi funkciju koja vraca sumu brojeva u opsegu a,b
+    //public static int suma2(int a, int b)
+	
+	public static int suma2(int a, int b) {
+		int suma = 0;
+	for (int i = a; i <= b; i++) {
+	suma = suma + i;
+         }
+	return suma;
+   }
+	
+	public static void main(String[] args) {
+        Scanner sc = new Scanner (System.in);
+
+		int a = sc.nextInt();
+		int b = sc.nextInt();
+		
+		System.out.println(suma2 (a, b));
+	}
+}
+		// napisati funkciju koja racuna sumu djelilaca broja
+	//(ne ukljucujuci 1 i njega samog)
+	
+	public static int sumaDjelilaca (int n) {
+	  int suma = 0;
+	  for (int i = 2; i < n; i++) {
+	     if (n % i == 0) {
+	      suma = suma + i;
+	     }
+	  }
+	  return suma;
+}
+	
+	public static void main(String[] args) {
+        Scanner sc = new Scanner (System.in);
+        int n = sc.nextInt();
+        
+        System.out.println (sumaDjelilaca(n));
+	}
+}
+	
+		
+		public static int sumaDjelilaca (int n) {
+		  int suma = 0;
+		  for (int i = 2; i < n; i++) {
+		     if (n % i == 0) {
+		      suma = suma + i;
+		     }
+		  }
+		  return suma;
+	}
+	
+	// napisati funkciju koja vraca da li je broj prost
+	public static boolean prost(int n) {
+	int suma = sumaDjelilaca (n);
+	if (suma == 0) return true;
+	else return false;
+	}
+	
+	public static void main(String[] args) {
+        Scanner sc = new Scanner (System.in);
+        int n = sc.nextInt();
+        System.out.println (prost(n));
+	}
+
+package Funkcije;
+import java.util.Scanner;
+
+public class vjezbanje {
+	
+	public static int sumaDjelilaca(int n) {
+		int suma = 0;
+		for (int i = 2; i < n; i++) {
+			if (n % i == 0) {
+				suma = suma + i;
+			}
+		}
+		return suma;
+	}
+	
+	public static boolean prost(int n) {
+		int suma = sumaDjelilaca(n);
+		
+		if(suma == 0) return true;
+		else return false;
+	}
+	
+	// napisati funkciju koja vraca sumu prostih
+	// brojeva od 1 do n
+	public static int sumaProstih (int n) {
+	 int suma = 0;
+	 for (int i = 1; i <= n; i++) {
+	 if (prost(i)) {
+		 suma = suma + i;
+	 }
+	 }
+	
+	 return suma;
+      }	
+	
+	public static void main(String[] args) {
+        Scanner sc = new Scanner (System.in);
+        int n = sc.nextInt();
+        System.out.println (sumaProstih(n));
+	}
+}
+
+
+
+        
+	
+	
+		
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
