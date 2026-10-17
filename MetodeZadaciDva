@@ -1,0 +1,79 @@
+package Funkcije; 
+import java.util.Scanner;
+   public class vjezbanjeMetode {
+	   
+	//Napisi metodu sumaParnih (int n) koja vraca zbir
+	// svih parnih brojeva od 1 do n
+	   
+	   public static int sumaParnih (int n) {
+		   int suma = 0;
+		   for (int i = 1; i <= n; i++) {
+			   if (i % 2 == 0) {
+				   suma = suma + i;
+			   }
+		   }
+		   return suma;
+	   }
+  /* Napisi metodu brojDjelilaca (int n) koja vraca koliko  pozitivnih
+  djelilaca ima broj n, ukljucujuci 1 i sam broj */
+	   
+	   public static int brojDjelilaca (int n) {
+		   int brojac = 0;
+		   for (int i = 1; i <= n; i++) {
+		   if (n % i == 0) {
+			   brojac = brojac + 1;  
+		      }
+		   }
+		   return brojac;
+	      
+	   }
+   /* Napisi metodu savrsen(int n) koji vraca true ako je broj jednak zbiru svojih
+   pozitivnih djelilaca, ne racunajuci njega samog  inace vracaj false */
+	   
+	   public static boolean savrsen (int n) {
+	   int suma = 0;
+	   for (int i = 1; i < n; i++) {
+		   if (n <= 1) {
+			   return false;
+		   }
+		if (n % i == 0) {
+			suma = suma + i;
+		}
+	   } 
+		if (suma == n) {
+			return true;
+		} else {
+			return false ;
+		}
+	 }
+	  /* Napisi metodu sumaIntervala (int a, int b); koja vraca zbir svih cijelih brojeva od
+	   a do b, ukljucujuci oba kraja, vec pretostavljamo da je a <= b */
+	   
+	   public static int sumaIntervala (int a, int b) {
+		   int suma = 0 ;
+		   for (int i = a; i <= b; i++) {
+			   suma = suma + i;
+		   }
+		   return suma;
+	   }
+	   
+   
+	   
+   public static void main(String[] args) {
+	   
+	Scanner sc = new Scanner (System.in);
+	
+	// System.out.println ("Unesite broj n");
+	// int n = sc.nextInt();
+	// System.out.println (savrsen (n));	
+	
+	System.out.println ("Unesite broj a: ");
+	int a = sc.nextInt();
+	
+	System.out.println ("Unesite broj b: ");
+	int b = sc.nextInt();
+	
+	System.out.println(sumaIntervala(a, b));
+   }
+   }
+   
